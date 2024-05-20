@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.HashMap;
+import java.util.ArrayList;
 
 class Cryo {
     public static void main(String[] args) {
@@ -15,33 +16,15 @@ class Cryo {
 
     public static String change(String entry) {
         char[] tamarindo = entry.toCharArray(); 
+
         HashMap<Character, String> diccionario = new HashMap<Character, String>();
-        diccionario.put('a',"4");
-        diccionario.put('b',"I3");
-        diccionario.put('c',"[");
-        diccionario.put('d',")");
-        diccionario.put('e',"3");
-        diccionario.put('f',"|=");
-        diccionario.put('g',"&");
-        diccionario.put('h',"#");
-        diccionario.put('i',"1");
-        diccionario.put('j',",_|");
-        diccionario.put('k',">|");
-        diccionario.put('l',"1");
-        diccionario.put('m',"/\\/\\");
-        diccionario.put('n',"^/");
-        diccionario.put('o',"0");
-        diccionario.put('p',"|*");
-        diccionario.put('q',"(_,)");
-        diccionario.put('r',"I2");
-        diccionario.put('s',"5");
-        diccionario.put('t',"7");
-        diccionario.put('u',"(_)");
-        diccionario.put('v',"\\/");
-        diccionario.put('w',"\\/\\/");
-        diccionario.put('x',"><");
-        diccionario.put('y',"j");
-        diccionario.put('z',"2");
+        char[] abecedario = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+        String[] l337 = {"4","I3","[",")","3","|=","&","#","1",",_|",">|","1","/\\/\\","^/","0","|*","(_,)","I2","5","7","(_)","\\/","\\/\\/","><","j","2"};
+        for (int l = 0; l < abecedario.length; l++) 
+        {
+            diccionario.put(abecedario[l],l337[l]);
+        } 
+        
         String patata = "";
         for (char i: tamarindo) {
             patata += diccionario.get(i); 
